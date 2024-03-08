@@ -1,0 +1,42 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Additional styles */
+@import 'additional-styles/utility-patterns.css';
+@import 'additional-styles/range-slider.css';
+@import 'additional-styles/toggle-switch.css';
+@import 'additional-styles/theme.css';
+
+@import 'tailwindcss/utilities';
+
+/* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
+@layer utilities {
+    .rtl {
+        direction: rtl;
+    }
+}
+
+.nav-link {
+  color: white; 
+  text-transform: uppercase; 
+  text-decoration: none; 
+  font-weight: bold; 
+  padding: 8px 16px; 
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #e2e8f0; 
+  text-decoration: none; 
+}
+
+.nav-list {
+  display: flex; 
+  justify-content: space-around; 
+  width: 100%;
+  list-style: none; 
+  padding: 0;
+}
+
+
+
