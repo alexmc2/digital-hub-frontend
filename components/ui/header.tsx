@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import HeaderLogo from '@/components/ui/header-logo';
+import MobileMenu from './mobile-menu';
 
 export default function Header() {
   return (
@@ -9,7 +10,7 @@ export default function Header() {
           <HeaderLogo />
 
           {/* Desktop navigation */}
-          <nav className="flex grow ">
+          <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center nav-list">
               <li>
@@ -29,7 +30,7 @@ export default function Header() {
               </li>
               <li>
                 <Link href="/data-science" className="nav-link">
-                  Data Science
+                  Tech
                 </Link>
               </li>
               <li>
@@ -37,24 +38,31 @@ export default function Header() {
                   Latest News
                 </Link>
               </li>
-              <li>
-                <Link
-                  className="text-sm font-medium text-slate-400 hover:text-slate-200 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
-                  href="/signin"
-                >
-                  Sign in
-                </Link>
-              </li>
-              <li className="ml-3">
-                <Link
-                  className="text-sm font-medium text-slate-400 hover:text-slate-200 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
-                  href="/join"
-                >
-                  Join
-                </Link>
-              </li>
             </ul>
           </nav>
+          {/* Desktop sign in links */}
+          <ul className="flex-1 flex justify-end items-center ml-6">
+            <li>
+              <Link
+                className="font-medium text-md text-slate-400 hover:text-white whitespace-nowrap transition duration-150 ease-in-out"
+                href="/signin"
+              >
+                Sign in
+              </Link>
+            </li>
+            <li className="ml-6">
+              <Link
+                className="font-medium text-md text-slate-400 hover:text-white whitespace-nowrap transition duration-150 ease-in-out"
+                href="/signup"
+              >
+                <span className="relative inline-flex items-center">
+                  Sign up{' '}
+                </span>
+              </Link>
+            </li>
+          </ul>
+
+          <MobileMenu />
         </div>
       </div>
     </header>

@@ -63,7 +63,7 @@ export default async function PostsList() {
             return (
               <div
                 key={post.id}
-                className="[&:nth-child(-n+4)]:-order-1 bg-gradient-to-tr from-slate-100 via-slate-100 to-slate-100 text-xl "
+                className="[&:nth-child(-n+4)]:-order-1  bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20"
               >
                 <div className="relative p-3">
                   <div
@@ -88,7 +88,7 @@ export default async function PostsList() {
                         <div className="mb-2">
                           <h2>
                             <Link
-                              className="text-slate-800 font-semibold hover:text-black transition duration-150 ease-in-out text-"
+                              className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out text-xl"
                               href={`/posts/${post.id}`}
                             >
                               {post.title}
