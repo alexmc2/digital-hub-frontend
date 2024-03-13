@@ -169,7 +169,7 @@ export default function Sidebar() {
                       </a>
                     </h3>
                   </div>
-                  <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border border-slate-700 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
+                  <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
                     Follow
                   </button>
                 </div>
@@ -191,7 +191,7 @@ export default function Sidebar() {
                       </a>
                     </h3>
                   </div>
-                  <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border border-slate-700 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
+                  <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
                     Follow
                   </button>
                 </div>
@@ -213,7 +213,7 @@ export default function Sidebar() {
                       </a>
                     </h3>
                   </div>
-                  <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border border-slate-700 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
+                  <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
                     Follow
                   </button>
                 </div>

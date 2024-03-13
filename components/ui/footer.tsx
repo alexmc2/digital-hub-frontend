@@ -4,7 +4,7 @@ import Logo from '@/public/images/logo.svg';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-800">
+    <footer className="border-t dark:border-slate-800 border-slate-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-8">
           {/* Top area */}

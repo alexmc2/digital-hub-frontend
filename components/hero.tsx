@@ -3,10 +3,10 @@ import Illustration from '@/public/images/hero-illustration.svg';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden ">
       {/* Bg */}
       <div
-        className="absolute inset-0 bg-gradient-to-t from-slate-800 bg-opacity-60 pointer-events-none -z-10"
+        className="absolute inset-0 dark:bg-gradient-to-t dark:from-slate-800/50 pointer-events-none bg-gradient-to-t from-slate-50 to-white "
         aria-hidden="true"
       />
 
@@ -17,21 +17,21 @@ export default function Hero() {
       >
         <Image
           src={Illustration}
-          className="max-w-none"
+          className="max-w-none "
           priority
           alt="Hero Illustration"
         />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-20 pb-8 md:pt-18 md:pb-16">
+        <div className="pt-20 pb-8 md:pt-20 md:pb-20">
           {/* Hero content */}
           <div className="relative max-w-xl mx-auto md:max-w-none text-center md:text-left flex flex-col md:flex-row">
             {/* Content */}
             <div className="md:w-[48rem]">
               {/* Copy */}
               <div className="md:pr-32">
-                <h1 className="h1 font-aspekta bg-clip-text text-transparent bg-gradient-to-tr from-sky-500 via-sky-200 to-slate-200 pb-6">
+                <h1 className="h1 font-aspekta bg-clip-text text-transparent dark:bg-gradient-to-tr dark:from-sky-500 dark:via-sky-200 dark:to-slate-200 bg-gradient-to-tr from-sky-600 via-sky-500 to-slate-400 ">
                   BEYOND BYTES
                 </h1>
                 {/* <p className="text-lg text-slate-400 mb-8">

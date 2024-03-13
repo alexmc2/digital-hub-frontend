@@ -16,7 +16,7 @@ export default async function PostsList() {
   return (
     <div>
       {/* Content header */}
-      <div className="border-b border-slate-800 pb-6 mb-10">
+      <div className="border-b dark:border-slate-800 border-slate-200 pb-6 mb-10">
         <div className="text-center md:text-left md:flex justify-between items-center">
           {/* Right: Button */}
           <div className="mb-4 md:mb-0 md:order-1 md:ml-6">
@@ -63,7 +63,8 @@ export default async function PostsList() {
             return (
               <div
                 key={post.id}
-                className="[&:nth-child(-n+4)]:-order-1  bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20"
+                // className="[&:nth-child(-n+4)]:-order-1  dark:bg-gradient-to-tr dark:from-slate-800/20 dark:via-slate-800/50 dark:to-slate-800/20 bg-gradient-to-t from-slate-50 to-white"
+                className="bg-slate-50 border border-slate-200 rounded dark:bg-slate-800 dark:border-slate-700"
               >
                 <div className="relative p-3">
                   <div
@@ -88,7 +89,7 @@ export default async function PostsList() {
                         <div className="mb-2">
                           <h2>
                             <Link
-                              className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out text-xl"
+                              className="dark:text-slate-200 text-black font-semibold hover:text-white transition duration-150 ease-in-out text-xl"
                               href={`/posts/${post.id}`}
                             >
                               {post.title}
@@ -130,7 +131,7 @@ export default async function PostsList() {
 
         {/* Show more */}
         <div className="text-right">
-          <button className="btn-sm py-1.5 h-8 text-sky-400 border border-slate-700 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800">
+          <button className="btn-sm py-1.5 h-8 text-sky-400 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800">
             Show More <span className="tracking-normal ml-1">-&gt;</span>
           </button>
         </div>

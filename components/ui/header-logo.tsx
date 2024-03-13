@@ -6,7 +6,7 @@ export default function HeaderLogo() {
   return (
     <div className="shrink-0 mr-4">
       {/* Logo */}
-      <Link className="block group" href="/" aria-label="Cruip">
+      <Link className="block group" href="/" aria-label="logo">
         <Image src={Logo} width={32} height={32} priority alt="Beyond Bytes" />
       </Link>
     </div>

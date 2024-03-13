@@ -44,3 +44,16 @@
     transform: rotate(135deg);
     transition: y 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.1s ease-out;
 }
+
+/* Light Mode */
+.custom-ul-gradient {
+  background: linear-gradient(to bottom, theme(colors.white), theme(colors.slate.50)) padding-box, 
+              conic-gradient(from 180deg at 50% 50%, theme(colors.white) 0%, theme(colors.slate.200) 25%, theme(colors.slate.200) 75%, theme(colors.white) 100%) border-box;
+}
+
+/* Dark Mode */
+.dark .custom-ul-gradient {
+  background: linear-gradient(to bottom, theme(colors.slate.900), theme(colors.slate.900)) padding-box, 
+              conic-gradient(from 180deg at 50% 50%, theme(colors.slate.400) 0%, theme(colors.slate.700) 25%, theme(colors.slate.700) 75%, theme(colors.slate.400) 100%) border-box;
+}
+

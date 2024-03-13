@@ -27,7 +27,7 @@
 }
 
 .form-switch input[type='checkbox']:disabled + label {
-  @apply cursor-not-allowed bg-slate-100 border border-slate-200;
+  @apply cursor-not-allowed bg-slate-50 border border-slate-200;
 }
 
 .form-switch input[type='checkbox']:disabled + label > span:first-child {

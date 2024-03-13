@@ -54,7 +54,7 @@ export default function SignIn() {
               {/* Page header */}
               <div className="max-w-2xl mx-auto text-center">
                 <h1 className="h2 font-aspekta bg-clip-text text-transparent bg-gradient-to-tr from-sky-400 via-sky-300 to-slate-200 pb-12">
-                  Welcome back to the Beyond Bytes
+                  Welcome back to Beyond Bytes
                 </h1>
               </div>
 
@@ -98,18 +98,18 @@ export default function SignIn() {
                 {/* Divider */}
                 <div className="flex items-center my-4">
                   <div
-                    className="border-t border-slate-800 grow mr-3"
+                    className="border-t dark:border-slate-800 border-slate-200 grow mr-3"
                     aria-hidden="true"
                   />
                   <div className="text-xs text-slate-400 italic">Or</div>
                   <div
-                    className="border-t border-slate-800 grow ml-3"
+                    className="border-t dark:border-slate-800 border-slate-200 grow ml-3"
                     aria-hidden="true"
                   />
                 </div>
 
                 {/* Social login */}
-                <button className="btn-sm h-9 text-sky-400 border border-slate-700 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 w-full relative flex after:flex-1">
+                <button className="btn-sm h-9 text-sky-400 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 w-full relative flex after:flex-1">
                   <div className="flex-1 flex items-center">
                     <svg
                       className="w-4 h-4 fill-sky-400 shrink-0"

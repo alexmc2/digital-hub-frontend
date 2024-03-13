@@ -46,15 +46,26 @@ input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
-
+/* Light Mode Styles */
 .form-input,
 .form-textarea,
 .form-multiselect,
 .form-select,
 .form-checkbox,
 .form-radio {
+  @apply bg-transparent bg-gradient-to-tr from-slate-200/20 via-slate-200/50 to-slate-200/20 border border-slate-300 focus:bg-slate-200 focus:border-slate-400;
+}
+
+/* Dark Mode Styles */
+.dark .form-input,
+.dark .form-textarea,
+.dark .form-multiselect,
+.dark .form-select,
+.dark .form-checkbox,
+.dark .form-radio {
   @apply bg-transparent bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 border border-slate-700 focus:bg-slate-800 focus:border-slate-600;
 }
+
 
 .form-input,
 .form-textarea,

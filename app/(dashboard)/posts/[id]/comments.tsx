@@ -57,7 +57,7 @@ export default function Comments() {
             </div>
           </div>
           {/* Comments (2nd level) */}
-          <ul className="pl-4 border-l-2 border-slate-700">
+          <ul className="pl-4 border-l-2 dark:border-slate-800 border-slate-200">
             <li className="pt-4">
               <div className="mb-1">
                 <div className="flex items-center mb-1">
@@ -98,7 +98,7 @@ export default function Comments() {
                 </div>
               </div>
               {/* Comment (3rd level) */}
-              <ul className="pl-4 border-l-2 border-slate-700">
+              <ul className="pl-4 border-l-2 dark:border-slate-800 border-slate-200">
                 <li className="pt-4">
                   <div className="mb-1">
                     <div className="flex items-center mb-1">

@@ -66,7 +66,7 @@ export default async function SinglePost({
                 <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6">
                   {/* Upvotes button */}
                   <div className="shrink-0">
-                    <button className="sticky top-6 flex flex-col items-center text-center w-14 h-14 px-1 py-3 rounded border border-slate-700 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
+                    <button className="sticky top-6 flex flex-col items-center text-center w-14 h-14 px-1 py-3 rounded border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
                       <svg
                         className="inline-flex fill-sky-400 mb-1"
                         width="11"

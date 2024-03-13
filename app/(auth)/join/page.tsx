@@ -15,7 +15,7 @@ export default function Join() {
   return (
     <>
       {/* Site header */}
-      <header className="absolute w-full bg-slate-900 z-30">
+      <header className="absolute w-full dark:bg-slate-900 bg-white z-30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16 md:h-20">
             <HeaderLogo />
