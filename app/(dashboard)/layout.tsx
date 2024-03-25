@@ -1,22 +1,19 @@
-import Header from '@/components/ui/header'
-import Footer from '@/components/ui/footer'
+import Header from '@/components/ui/header';
+import Footer from '@/components/ui/footer';
+
 
 export default function DefaultLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <>
       <Header />
-      
-      <main className="grow">
 
-        {children}
-
-      </main>
+      <main className="grow">{children}</main>
 
       <Footer />
     </>
-  )
+  );
 }

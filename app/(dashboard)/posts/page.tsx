@@ -1,13 +1,9 @@
-export const metadata = {
-  title: 'Home - Beyond Bytes',
-  description: 'Page description',
-};
 import Hero from '@/components/hero';
-import PostsList from './posts/posts-list';
+import PostsList from './posts-list';
 import Boxes from '@/components/boxes';
 import Sidebar from '@/components/sidebar';
 
-export default function Home() {
+export default function Posts() {
   return (
     <>
       <Hero />

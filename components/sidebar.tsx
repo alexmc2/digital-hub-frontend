@@ -60,12 +60,12 @@ export default function Sidebar() {
                     alt="User 06"
                   />
                   <div className="text-xs">
-                    <a
+                    <Link
                       className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
                       href="#0"
                     >
                       MaryLync77
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <h3 className="text-sm mb-1">
@@ -91,12 +91,12 @@ export default function Sidebar() {
                     alt="User 09"
                   />
                   <div className="text-xs">
-                    <a
+                    <Link
                       className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
                       href="#0"
                     >
                       Zakaria_C
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <h3 className="text-sm mb-1">
@@ -122,12 +122,12 @@ export default function Sidebar() {
                     alt="User 05"
                   />
                   <div className="text-xs">
-                    <a
+                    <Link
                       className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
                       href="#0"
                     >
                       ElenMary182
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <h3 className="text-sm mb-1">
@@ -161,12 +161,12 @@ export default function Sidebar() {
                       alt="Startup 01"
                     />
                     <h3 className="truncate text-sm">
-                      <a
+                      <Link
                         className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
                         href="#0"
                       >
                         Visual Studio X
-                      </a>
+                      </Link>
                     </h3>
                   </div>
                   <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
@@ -183,12 +183,12 @@ export default function Sidebar() {
                       alt="Startup 02"
                     />
                     <h3 className="truncate text-sm">
-                      <a
+                      <Link
                         className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
                         href="#0"
                       >
                         Gymp DevTools
-                      </a>
+                      </Link>
                     </h3>
                   </div>
                   <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
@@ -205,12 +205,12 @@ export default function Sidebar() {
                       alt="Startup 03"
                     />
                     <h3 className="truncate text-sm">
-                      <a
+                      <Link
                         className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
                         href="#0"
                       >
                         Paytable Inc
-                      </a>
+                      </Link>
                     </h3>
                   </div>
                   <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
@@ -237,12 +237,12 @@ export default function Sidebar() {
                     alt="User 06"
                   />
                   <div className="text-xs">
-                    <a
+                    <Link
                       className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
                       href="#0"
                     >
                       MaryLync77
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <h3 className="text-sm mb-1">
@@ -269,12 +269,12 @@ export default function Sidebar() {
                     alt="User 09"
                   />
                   <div className="text-xs">
-                    <a
+                    <Link
                       className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
                       href="#0"
                     >
                       Zakaria_C
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <h3 className="text-sm mb-1">
@@ -300,12 +300,12 @@ export default function Sidebar() {
                     alt="User 01"
                   />
                   <div className="text-xs">
-                    <a
+                    <Link
                       className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
                       href="#0"
                     >
                       IndieMark
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <h3 className="text-sm mb-1">
@@ -325,13 +325,13 @@ export default function Sidebar() {
           </div>
 
           {/* Newsletter */}
-          <div className="-rotate-1">
-            <div className="relative p-5 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20">
+          <div className="">
+            <div className="relative p-5 bg-gradient-to-tr dark:from-slate-800/20 dark:via-slate-800/50 dark:to-slate-800/20 from-slate-100 via-slate-200/50 to-slate-200/20">
               <div
                 className="absolute inset-0 -m-px pointer-events-none -z-10 before:absolute before:inset-0 before:bg-gradient-to-t before:from-slate-700 before:to-slate-800 after:absolute after:inset-0 after:bg-slate-900 after:m-px"
                 aria-hidden="true"
               />
-              <div className="font-semibold text-center bg-clip-text text-transparent bg-gradient-to-tr from-sky-400 via-sky-300 to-slate-200 mb-3">
+              <div className="font-semibold text-center  bg-slate-50 border border-slate-200 rounded dark:bg-slate-800 dark:border-slate-700 dark:from-sky-500 dark:via-sky-300 dark:to-sky-500 from-sky-500 via-sky-500 to-sky-500  mb-3">
                 Get the best of Beyond Bytes, directly in your inbox.
               </div>
               {/* Form */}

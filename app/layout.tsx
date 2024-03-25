@@ -3,7 +3,7 @@ import './css/style.css';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import Theme from './theme-provider';
-import Header from '@/components/ui/header';
+import { AuthProvider } from './context';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -33,13 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body
         className={`${inter.variable} ${aspekta.variable} font-inter antialiased dark:bg-slate-900 bg-white text-black dark:text-slate-200 tracking-tight`}
       >
         <Theme>
           <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-            {children}
+            <AuthProvider>{children}</AuthProvider>
           </div>
         </Theme>
       </body>
