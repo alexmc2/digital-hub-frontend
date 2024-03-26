@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 w-full dark:bg-slate-900 bg-white text-black dark:text-slate-200 z-50 ">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           <HeaderLogo />
           {/* Desktop navigation */}

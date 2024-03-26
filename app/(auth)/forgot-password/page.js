@@ -4,7 +4,7 @@ import Button from '@/components/Button';
 import Input from '@/components/Input';
 import InputError from '@/components/InputError';
 import Label from '@/components/Label';
-import { useAuth } from '@/hooks/auth';
+import { useAuth } from '@/utils/hooks/auth';
 import { useState } from 'react';
 import AuthSessionStatus from '@/app/(auth)/AuthSessionStatus';
 import HeaderLogo from '@/components/ui/header-logo';
@@ -27,7 +27,7 @@ const Page = () => {
 
   return (
     <>
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Page header */}
           <div className="max-w-2xl mx-auto text-center">
@@ -66,18 +66,15 @@ const Page = () => {
                   <div className="flex items-center justify-end mt-4"></div>
                 </form>
 
-       
-
-                  <div className="card-actions">
-                    <button
-                      type="submit"
-                      className="btn-sm text-white bg-sky-400 hover:bg-sky-600 w-full my-6"
-                    >
-                      Send Password Reset Link
-                    </button>
-                  </div>
+                <div className="card-actions">
+                  <button
+                    type="submit"
+                    className="btn-sm text-white bg-sky-400 hover:bg-sky-600 w-full my-6"
+                  >
+                    Send Password Reset Link
+                  </button>
                 </div>
-              
+              </div>
             </div>
           </div>
 

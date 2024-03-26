@@ -5,13 +5,13 @@ import Input from '@/components/Input';
 import InputError from '@/components/InputError';
 import Label from '@/components/Label';
 import Link from 'next/link';
-import { useAuth } from '@/hooks/auth';
+import { useAuth } from '@/utils/hooks/auth';
 import { useState } from 'react';
 
 const Page = () => {
   const { register } = useAuth({
     middleware: 'guest',
-    redirectIfAuthenticated: '/dashboard',
+    redirectIfAuthenticated: '/',
   });
 
   const [name, setName] = useState('');
@@ -34,7 +34,7 @@ const Page = () => {
 
   return (
     <div className="flex items-center justify-center max-h-screen ">
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 ">
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 ">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Page header */}
           <div className="max-w-2xl mx-auto text-center">

@@ -1,5 +1,5 @@
-import useSWR from 'swr';
-import axios from '../lib/axios';
+import useSWRImmutable from 'swr/immutable';
+import axios from '../../lib/axios';
 import { useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 
@@ -12,7 +12,7 @@ export const useAuth = ({ middleware, redirectIfAuthenticated } = {}) => {
     error,
     mutate,
     isValidating,
-  } = useSWR('/api/user', () =>
+  } = useSWRImmutable('/api/user', () =>
     axios
       .get('/api/user')
       .then((res) => res.data)

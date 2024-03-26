@@ -5,12 +5,12 @@ import Logo from '@/public/images/logo.svg';
 export default function Footer() {
   return (
     <footer className="border-t dark:border-slate-800 border-slate-200">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
         <div className="py-8">
           {/* Top area */}
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mb-4">
-            <div className="shrink-0 mr-4">
-              {/* Logo */}
+            {/* <div className="shrink-0 mr-4">
+          
               <Link
                 className="inline-flex group mb-8 md:mb-0"
                 href="/"
@@ -18,7 +18,7 @@ export default function Footer() {
               >
                 <Image src={Logo} alt="Beyond Bytes" />
               </Link>
-            </div>
+            </div> */}
             {/* Right links */}
             <div className="text-sm font-medium md:order-1 mb-2 md:mb-0">
               <ul className="inline-flex flex-wrap text-sm space-x-6">

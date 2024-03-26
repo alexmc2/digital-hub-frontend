@@ -1,6 +1,6 @@
 'use client';
 import { createContext, useContext, ReactNode } from 'react';
-import { useAuth } from '@/hooks/auth'; // Make sure to import your useAuth hook
+import { useAuth } from '@/utils/hooks/auth';
 
 const AuthContext = createContext({} as ReturnType<typeof useAuth>);
 

@@ -30,7 +30,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/(auth)/login/page.jsx",
-    "hooks/auth.js",
+    "utils/hooks/auth.ts",
     "components/Button.js",
     "app/(auth)/forgot-password/page.js",
     "app/(dashboard)/posts/new"

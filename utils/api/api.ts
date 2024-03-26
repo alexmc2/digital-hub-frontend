@@ -25,9 +25,11 @@
 import axios from '@/lib/axios';
 
 // getAllPosts function that fetches posts from the API
+
 export const getAllPosts = async () => {
   try {
     const response = await axios.get('/api');
+
     console.log(response.data);
     return response.data;
   } catch (error) {
@@ -163,8 +165,3 @@ export async function manageAvatar(formData) {
     throw new Error((error as Error).message);
   }
 }
-
-
-// Route::get('/profile/{user:name}', [UserController::class, 'profileApi']); // Viewing a user profile
-// Route::get('/profile/{user:name}/followers', [UserController::class, 'profileFollowersApi']); // Viewing user's followers
-// Route::get('/profile/{user:name}/following', [UserController::class, 'profileFollowingApi']); // Viewing who the user is following
