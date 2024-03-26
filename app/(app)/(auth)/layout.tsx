@@ -30,8 +30,6 @@ export default function AuthLayout({
 }) {
   return (
     <>
-      <Header />
-
       <main className="grow font-sans text-gray-900 antialiased dark:text-gray-400 dark:bg-slate-900 bg-white  ">
         {children}
       </main>

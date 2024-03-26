@@ -1,5 +1,5 @@
 import Hero from '@/components/hero';
-import PostsList from '@/app/(dashboard)/posts/posts-list';
+import PostsList from '@/app/(app)/posts/posts-list';
 import Boxes from '@/components/boxes';
 import Sidebar from '@/components/sidebar';
 import Link from 'next/link';
@@ -59,7 +59,9 @@ export default function Posts() {
                   </div>
                 </div>
 
-                <PostsList />
+        
+                    <PostsList />
+               
                 <Boxes />
               </div>
             </div>

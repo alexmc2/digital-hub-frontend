@@ -5,14 +5,14 @@ import Image from 'next/image';
 import HeaderLogo from '@/components/ui/header-logo';
 import Illustration from '@/public/images/hero-illustration.svg';
 
-import Input from '@/components/Input';
-import InputError from '@/components/InputError';
-import Label from '@/components/Label';
+import Input from '@/components/auth/Input';
+import InputError from '@/components/auth/InputError';
+import Label from '@/components/auth/Label';
 
 import { useAuth } from '@/utils/hooks/auth';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import AuthSessionStatus from '@/app/(auth)/AuthSessionStatus';
+import AuthSessionStatus from '@/app/(app)/(auth)/AuthSessionStatus';
 
 export default function Login() {
   const router = useRouter();

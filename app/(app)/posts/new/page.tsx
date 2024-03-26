@@ -38,9 +38,8 @@ const CreatePostPage = () => {
     formData.append('topic', topic);
     try {
       const response = await axios.post('/api/create-post', formData);
-
-      const postId = response.data.id;
-      router.push(`/posts/${postId}`);
+      const postId = response.data.data.id; // Extract the postId from the response data
+      router.push(`/posts/${postId}`); // Redirect to the post page using the postId
     } catch (error: any) {
       setErrors(error.response?.data.errors || {});
     }

@@ -29,11 +29,11 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/(auth)/login/page.jsx",
+    "app/(app)/(auth)/login/page.jsx",
     "utils/hooks/auth.ts",
-    "components/Button.js",
-    "app/(auth)/forgot-password/page.js",
-    "app/(dashboard)/posts/new"
+    "components/auth/Button.js",
+    "app/(app)/(auth)/forgot-password/page.js",
+    "app/(app)/posts/new"
   ],
   "exclude": ["node_modules"]
 }

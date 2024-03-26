@@ -66,7 +66,7 @@ export default async function SinglePost({
                     />
                   </div>
                 )}
-                <div className="text-slate-400 space-y-6">
+                <div className="text-slate-700 dark:text-slate-200 space-y-6">
                   <p>{post.body}</p>
                 </div>
               </article>

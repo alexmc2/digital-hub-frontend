@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams } from 'next/navigation';
 import { useAuth } from '@/utils/hooks/auth';
 import Link from 'next/link';
-import PostsList from '@/app/(dashboard)/posts/posts-list';
+import PostsList from '@/app/(app)/posts/posts-list';
 
 export default function Posts() {
   const { user, logout } = useAuth({
@@ -83,12 +83,11 @@ export default function Posts() {
                   </div>
                 </div>
 
-                <PostsList />
-                
+                <div className="posts-list-three-cols">
+                  <PostsList />
+                </div>
               </div>
             </div>
-
-            
           </div>
         </div>
       </section>

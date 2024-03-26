@@ -1,13 +1,16 @@
 'use client';
 
 import Hero from '@/components/hero';
-import PostsList from '@/app/(dashboard)/posts/posts-list';
+import PostsList from '@/app/(app)/posts/posts-list';
 import Boxes from '@/components/boxes';
 import Sidebar from '@/components/sidebar';
 import Link from 'next/link';
 import { useAuthContext } from '@/app/context';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 export default function Home() {
+  const pathname = usePathname();
   const { user } = useAuthContext();
   return (
     <>
@@ -33,27 +36,42 @@ export default function Home() {
                           </Link>
                         </div>
 
-                        <ul className="grow inline-flex flex-wrap text-lg  -mx-3 -my-1">
+                        <ul className="grow inline-flex flex-wrap text-lg -mx-3 -my-1">
                           <li className="px-3 py-1">
-                            <a
-                              className="text-sky-400 relative text-lg  transition duration-150 ease-in-out"
-                              href="#0"
+                            <Link
+                              className={clsx(
+                                'text-slate-500 hover:text-slate-200 transition duration-150 ease-in-out',
+                                {
+                                  'text-sky-400': pathname === '/',
+                                }
+                              )}
+                              href="/"
                             >
                               <span>Latest Posts</span>
-                            </a>
+                            </Link>
                           </li>
                           <li className="px-3 py-1">
                             <Link
-                              className="text-slate-500 hover:text-slate-200 transition duration-150 ease-in-out"
-                              href="#0"
+                              className={clsx(
+                                'text-slate-500 hover:text-slate-200 transition duration-150 ease-in-out',
+                                {
+                                  'text-sky-400': pathname === '/profile/followers',
+                                }
+                              )}
+                              href="/profile/followers"
                             >
                               <span>Followers</span>
                             </Link>
                           </li>
                           <li className="px-3 py-1">
                             <Link
-                              className="text-slate-500 hover:text-slate-200 transition duration-150 ease-in-out"
-                              href="#0"
+                              className={clsx(
+                                'text-slate-500 hover:text-slate-200 transition duration-150 ease-in-out',
+                                {
+                                  'text-sky-400': pathname === '/following',
+                                }
+                              )}
+                              href="/following"
                             >
                               <span>Following</span>
                             </Link>
@@ -63,14 +81,19 @@ export default function Home() {
                     ) : (
                       <>
                         {/* Content for not logged-in users */}
-                        <ul className="grow inline-flex flex-wrap text-lg  -mx-3 -my-1">
+                        <ul className="grow inline-flex flex-wrap text-lg -mx-3 -my-1">
                           <li className="px-3 py-1">
-                            <a
-                              className="text-sky-400 relative transition duration-150 ease-in-out"
-                              href="#0"
+                            <Link
+                              className={clsx(
+                                'text-slate-500 hover:text-slate-200 transition duration-150 ease-in-out',
+                                {
+                                  'text-sky-400': pathname === '/',
+                                }
+                              )}
+                              href="/"
                             >
                               <span>Latest Posts</span>
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </>
@@ -79,6 +102,7 @@ export default function Home() {
                 </div>
 
                 <PostsList />
+
                 <Boxes />
               </div>
             </div>

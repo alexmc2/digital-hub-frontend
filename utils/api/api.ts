@@ -33,7 +33,8 @@ export const getAllPosts = async () => {
     console.log(response.data);
     return response.data;
   } catch (error) {
-    throw new Error((error as Error).message);
+    console.error('Error fetching posts:', error);
+    return []; // Return an empty array or a default value
   }
 };
 
@@ -101,6 +102,16 @@ export async function viewSinglePost(postId) {
   try {
     const response = await axios.get(`/api/post/${postId}`);
     console.log('View Single Post:', response.data);
+    return response.data;
+  } catch (error) {
+    throw new Error((error as Error).message);
+  }
+}
+
+export async function searchPosts(term) {
+  try {
+    const response = await axios.get(`/api//search/${term}`);
+    console.log('Search:', response.data);
     return response.data;
   } catch (error) {
     throw new Error((error as Error).message);

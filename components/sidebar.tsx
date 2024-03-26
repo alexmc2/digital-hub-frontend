@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import User01 from '@/public/images/avatar-01.jpg';
-import User05 from '@/public/images/avatar-05.jpg';
-import User06 from '@/public/images/avatar-06.jpg';
-import User09 from '@/public/images/avatar-09.jpg';
-import Startup01 from '@/public/images/startup-01.svg';
-import Startup02 from '@/public/images/startup-02.svg';
-import Startup03 from '@/public/images/startup-03.svg';
 
-export default function Sidebar() {
+import { getAllPosts } from '@/utils/api/api';
+
+
+export default async function Sidebar() {
+  // Since we're in a server component, we can use top-level await.
+  const response = await getAllPosts();
+  const posts = response.data;
+
   return (
     <aside className="md:w-64 lg:w-80 md:shrink-0 pt-6 pb-12 md:pb-20">
       <div className="md:pl-6 lg:pl-10">
@@ -44,284 +44,36 @@ export default function Sidebar() {
             </div>
           </form>
 
-          {/* New Discussions */}
-          <div>
-            <div className="text-xs uppercase text-slate-600 font-semibold mb-4">
-              New Discussions
-            </div>
-            <ul className="space-y-3">
-              <li>
-                <div className="flex items-center mb-1">
-                  <Image
-                    className="rounded-full mr-2"
-                    src={User06}
-                    width="16"
-                    height="16"
-                    alt="User 06"
-                  />
-                  <div className="text-xs">
-                    <Link
-                      className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
-                      href="#0"
-                    >
-                      MaryLync77
-                    </Link>
-                  </div>
-                </div>
-                <h3 className="text-sm mb-1">
-                  <Link
-                    className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
-                    href="/posts/1"
-                  >
-                    Search Startup Jobs - Week 5 - Build in Public - Slow Week
-                  </Link>
-                </h3>
-                <div className="text-xs text-slate-600">
-                  <span className="text-slate-500">22 Feb</span> ·{' '}
-                  <span className="text-slate-500">14 Comments</span>
-                </div>
-              </li>
-              <li>
-                <div className="flex items-center mb-1">
-                  <Image
-                    className="rounded-full mr-2"
-                    src={User09}
-                    width="16"
-                    height="16"
-                    alt="User 09"
-                  />
-                  <div className="text-xs">
-                    <Link
-                      className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
-                      href="#0"
-                    >
-                      Zakaria_C
-                    </Link>
-                  </div>
-                </div>
-                <h3 className="text-sm mb-1">
-                  <Link
-                    className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
-                    href="/posts/1"
-                  >
-                    What are the most useful tools for SEO marketing?
-                  </Link>
-                </h3>
-                <div className="text-xs text-slate-600">
-                  <span className="text-slate-500">22 Feb</span> ·{' '}
-                  <span className="text-slate-500">44 Comments</span>
-                </div>
-              </li>
-              <li>
-                <div className="flex items-center mb-1">
-                  <Image
-                    className="rounded-full mr-2"
-                    src={User05}
-                    width="16"
-                    height="16"
-                    alt="User 05"
-                  />
-                  <div className="text-xs">
-                    <Link
-                      className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
-                      href="#0"
-                    >
-                      ElenMary182
-                    </Link>
-                  </div>
-                </div>
-                <h3 className="text-sm mb-1">
-                  <Link
-                    className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
-                    href="/posts/1"
-                  >
-                    How can you minimize the customer acquisition cost?
-                  </Link>
-                </h3>
-                <div className="text-xs text-slate-600">
-                  <span className="text-slate-500">20 Feb</span> ·{' '}
-                  <span className="text-slate-500">19 Comments</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          {/* Latest Startups */}
-          <div>
-            <div className="text-xs uppercase text-slate-600 font-semibold mb-4">
-              Latest Startups
-            </div>
-            <ul className="space-y-3">
-              <li>
-                <div className="flex items-center justify-between">
-                  <div className="grow min-w-0 flex items-center mr-2">
-                    <Image
-                      className="shrink-0 mr-3"
-                      src={Startup01}
-                      alt="Startup 01"
-                    />
-                    <h3 className="truncate text-sm">
-                      <Link
-                        className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
-                        href="#0"
-                      >
-                        Visual Studio X
-                      </Link>
-                    </h3>
-                  </div>
-                  <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
-                    Follow
-                  </button>
-                </div>
-              </li>
-              <li>
-                <div className="flex items-center justify-between">
-                  <div className="grow min-w-0 flex items-center mr-2">
-                    <Image
-                      className="shrink-0 mr-3"
-                      src={Startup02}
-                      alt="Startup 02"
-                    />
-                    <h3 className="truncate text-sm">
-                      <Link
-                        className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
-                        href="#0"
-                      >
-                        Gymp DevTools
-                      </Link>
-                    </h3>
-                  </div>
-                  <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
-                    Follow
-                  </button>
-                </div>
-              </li>
-              <li>
-                <div className="flex items-center justify-between">
-                  <div className="grow min-w-0 flex items-center mr-2">
-                    <Image
-                      className="shrink-0 mr-3"
-                      src={Startup03}
-                      alt="Startup 03"
-                    />
-                    <h3 className="truncate text-sm">
-                      <Link
-                        className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
-                        href="#0"
-                      >
-                        Paytable Inc
-                      </Link>
-                    </h3>
-                  </div>
-                  <button className="text-xs text-sky-400 inline-flex font-medium rounded-full text-center px-2 py-0.5 border dark:border-slate-800 border-slate-200 bg-gradient-to-tr from-slate-800/20 via-slate-800/50 to-slate-800/20 hover:bg-slate-800 transition duration-150 ease-in-out">
-                    Follow
-                  </button>
-                </div>
-              </li>
-            </ul>
-          </div>
-
           {/* Popular Posts */}
+
           <div>
-            <div className="text-xs uppercase text-slate-600 font-semibold mb-4">
+            <div className="text-md uppercase text-slate-700 dark:text-slate-200 font-semibold mb-4">
               Popular Posts
             </div>
-            <ul className="space-y-3">
-              <li>
-                <div className="flex items-center mb-1">
-                  <Image
-                    className="rounded-full mr-2"
-                    src={User06}
-                    width="16"
-                    height="16"
-                    alt="User 06"
-                  />
-                  <div className="text-xs">
-                    <Link
-                      className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
-                      href="#0"
-                    >
-                      MaryLync77
-                    </Link>
+            {/* Posts list */}
+            <div className="space-y-2">
+              {posts.map((post) => (
+                <Link key={post.id} href={`/posts/${post.id}`}>
+                  <div className="flex items-center space-x-4  py-2 ">
+                    <Image
+                      src={post.image} // Use a default image if `post.image` is not available
+                      width={80} // Adjust the size as needed
+                      height={50} // Adjust the size as needed
+                      alt={post.title}
+                    />
+                    <div>
+                      <h5 className="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-slate-400 ">
+                        {post.title}
+                      </h5>
+                      <p className="text-xs text-sky-500">{post.user.name}</p>
+                      <div className="text-xs text-slate-700 dark:text-slate-200 ">
+                        {new Date(post.created_at).toLocaleDateString()}
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <h3 className="text-sm mb-1">
-                  <Link
-                    className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
-                    href="/posts/1"
-                  >
-                    How do you decide and keep focus on the{' '}
-                    <em className="italic">"right"</em> things?
-                  </Link>
-                </h3>
-                <div className="text-xs text-slate-600">
-                  <span className="text-slate-500">22 Feb</span> ·{' '}
-                  <span className="text-slate-500">14 Comments</span>
-                </div>
-              </li>
-              <li>
-                <div className="flex items-center mb-1">
-                  <Image
-                    className="rounded-full mr-2"
-                    src={User09}
-                    width="16"
-                    height="16"
-                    alt="User 09"
-                  />
-                  <div className="text-xs">
-                    <Link
-                      className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
-                      href="#0"
-                    >
-                      Zakaria_C
-                    </Link>
-                  </div>
-                </div>
-                <h3 className="text-sm mb-1">
-                  <Link
-                    className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
-                    href="/posts/1"
-                  >
-                    How do you approach building a team for your startup?
-                  </Link>
-                </h3>
-                <div className="text-xs text-slate-600">
-                  <span className="text-slate-500">22 Feb</span> ·{' '}
-                  <span className="text-slate-500">44 Comments</span>
-                </div>
-              </li>
-              <li>
-                <div className="flex items-center mb-1">
-                  <Image
-                    className="rounded-full mr-2"
-                    src={User01}
-                    width="16"
-                    height="16"
-                    alt="User 01"
-                  />
-                  <div className="text-xs">
-                    <Link
-                      className="font-medium text-sky-400 hover:text-sky-400 transition duration-150 ease-in-out"
-                      href="#0"
-                    >
-                      IndieMark
-                    </Link>
-                  </div>
-                </div>
-                <h3 className="text-sm mb-1">
-                  <Link
-                    className="text-slate-200 font-semibold hover:text-white transition duration-150 ease-in-out"
-                    href="/posts/1"
-                  >
-                    The 5 big lessons I've learnt from Geeks and Experts
-                  </Link>
-                </h3>
-                <div className="text-xs text-slate-600">
-                  <span className="text-slate-500">20 Feb</span> ·{' '}
-                  <span className="text-slate-500">19 Comments</span>
-                </div>
-              </li>
-            </ul>
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Newsletter */}
